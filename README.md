@@ -1,5 +1,5 @@
 # BrickEngine
-This is a Game Engine that has a Renderer and Entitys
+This is a Game Engine that has a Renderer and Entities
 
 # TODO:
 - Add Physics
