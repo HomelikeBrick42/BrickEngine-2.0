@@ -49,6 +49,12 @@ namespace BrickEngine {
 			: Material(material), Mesh(mesh) {}
 	};
 
+	struct TransparentComponent
+	{
+	private:
+		char charToStopErrors;
+	};
+
 	struct CameraComponent
 	{
 		BrickEngine::Camera Camera;

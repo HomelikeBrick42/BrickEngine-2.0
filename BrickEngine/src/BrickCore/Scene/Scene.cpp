@@ -35,6 +35,8 @@ namespace BrickEngine {
 	{
 		Entity& entity = CreateEntity(tag);
 		entity.AddComponent<MeshRendererComponent>(Material(ShaderLibrary::Get("Default"), color), MeshLibrary::Get("SharpEdgeCube"));
+		if (color.w < 1.0)
+			entity.AddComponent<TransparentComponent>();
 		return entity;
 	}
 
@@ -80,7 +82,17 @@ namespace BrickEngine {
 			auto view = m_Registry.view<TransformComponent>();
 			for (auto entity : view)
 			{
-				if (m_Registry.has<MeshRendererComponent>(entity))
+				if (m_Registry.has<MeshRendererComponent>(entity) && !m_Registry.has<TransparentComponent>(entity))
+				{
+					auto& [transform, mesh] = m_Registry.get<TransformComponent, MeshRendererComponent>(entity);
+
+					Renderer::Draw(mesh.Material, mesh.Mesh, transform.Transform);
+				}
+			}
+			auto transparent = m_Registry.view<TransparentComponent>();
+			for (auto entity : transparent)
+			{
+				if (m_Registry.has<MeshRendererComponent>(entity) && m_Registry.has<TransformComponent>(entity))
 				{
 					auto& [transform, mesh] = m_Registry.get<TransformComponent, MeshRendererComponent>(entity);
 

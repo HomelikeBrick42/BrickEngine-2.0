@@ -15,10 +15,10 @@ public:
 	virtual void OnEvent(Event& e) override;
 private:
 	Ref<Scene> m_Scene;
-	Entity m_Camera;
-	Entity m_Cube;
-
 	CameraController m_CameraController;
+	Entity m_Camera;
+	Entity m_Ground;
+	Entity m_Cube;
 private:
 	bool ResizeCamera(WindowResizeEvent& e)
 	{
@@ -26,7 +26,7 @@ private:
 			glm::perspective(
 				70.0f,
 				(float)GetWindow().GetWidth() / (float)GetWindow().GetHeight(),
-				0.1f,
+				0.001f,
 				1000.0f
 			)
 		);
