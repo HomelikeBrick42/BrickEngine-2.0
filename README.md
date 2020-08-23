@@ -1,6 +1,7 @@
 # BrickEngine
-This is a game engine that has a renderer and physics
+This is a Game Engine that has a Renderer and Entitys
 
 # TODO:
 - Add Physics
 - Add Android support
+- Add Networking (Multiplayer)
