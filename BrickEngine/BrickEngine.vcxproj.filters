@@ -114,10 +114,19 @@
     <ClInclude Include="src\BrickPhysics\Colliders\Collider.h">
       <Filter>src\BrickPhysics\Colliders</Filter>
     </ClInclude>
+    <ClInclude Include="src\BrickPhysics\CollisionData.h">
+      <Filter>src\BrickPhysics</Filter>
+    </ClInclude>
     <ClInclude Include="src\BrickRenderer\Camera.h">
       <Filter>src\BrickRenderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\BrickRenderer\CameraController.h">
+      <Filter>src\BrickRenderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\BrickRenderer\IndexBuffer.h">
+      <Filter>src\BrickRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BrickRenderer\MeshLibrary.h">
       <Filter>src\BrickRenderer</Filter>
     </ClInclude>
     <ClInclude Include="src\BrickRenderer\Platform\OpenGL\OpenGLIndexBuffer.h">
@@ -139,6 +148,9 @@
       <Filter>src\BrickRenderer</Filter>
     </ClInclude>
     <ClInclude Include="src\BrickRenderer\Shader.h">
+      <Filter>src\BrickRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BrickRenderer\ShaderLibrary.h">
       <Filter>src\BrickRenderer</Filter>
     </ClInclude>
     <ClInclude Include="src\BrickRenderer\VertexArray.h">
@@ -1404,10 +1416,6 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
-    <ClInclude Include="src\BrickPhysics\CollisionData.h" />
-    <ClInclude Include="src\BrickRenderer\ShaderLibrary.h" />
-    <ClInclude Include="src\BrickRenderer\CameraController.h" />
-    <ClInclude Include="src\BrickRenderer\MeshLibrary.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\BrickCore\Application.cpp">
@@ -1428,6 +1436,12 @@
     <ClCompile Include="src\BrickCore\Scene\Scene.cpp">
       <Filter>src\BrickCore\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="src\BrickRenderer\CameraController.cpp">
+      <Filter>src\BrickRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BrickRenderer\MeshLibrary.cpp">
+      <Filter>src\BrickRenderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\BrickRenderer\Platform\OpenGL\OpenGLIndexBuffer.cpp">
       <Filter>src\BrickRenderer\Platform\OpenGL</Filter>
     </ClCompile>
@@ -1443,11 +1457,11 @@
     <ClCompile Include="src\BrickRenderer\Platform\OpenGL\OpenGLVertexBuffer.cpp">
       <Filter>src\BrickRenderer\Platform\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\BrickRenderer\ShaderLibrary.cpp">
+      <Filter>src\BrickRenderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\brickpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\BrickRenderer\ShaderLibrary.cpp" />
-    <ClCompile Include="src\BrickRenderer\CameraController.cpp" />
-    <ClCompile Include="src\BrickRenderer\MeshLibrary.cpp" />
   </ItemGroup>
 </Project>

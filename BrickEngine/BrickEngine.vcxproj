@@ -607,10 +607,10 @@
     <ClCompile Include="src\BrickRenderer\Platform\OpenGL\OpenGLShader.cpp" />
     <ClCompile Include="src\BrickRenderer\Platform\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\BrickRenderer\Platform\OpenGL\OpenGLVertexBuffer.cpp" />
+    <ClCompile Include="src\BrickRenderer\ShaderLibrary.cpp" />
     <ClCompile Include="src\brickpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="src\BrickRenderer\ShaderLibrary.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
