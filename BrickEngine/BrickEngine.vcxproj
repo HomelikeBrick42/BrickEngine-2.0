@@ -162,6 +162,7 @@
     <ClInclude Include="src\BrickRenderer\Camera.h" />
     <ClInclude Include="src\BrickRenderer\CameraController.h" />
     <ClInclude Include="src\BrickRenderer\IndexBuffer.h" />
+    <ClInclude Include="src\BrickRenderer\Material.h" />
     <ClInclude Include="src\BrickRenderer\MeshLibrary.h" />
     <ClInclude Include="src\BrickRenderer\Platform\OpenGL\OpenGLIndexBuffer.h" />
     <ClInclude Include="src\BrickRenderer\Platform\OpenGL\OpenGLRenderer.h" />
@@ -601,6 +602,7 @@
     <ClCompile Include="src\BrickCore\Scene\Entity.cpp" />
     <ClCompile Include="src\BrickCore\Scene\Scene.cpp" />
     <ClCompile Include="src\BrickRenderer\CameraController.cpp" />
+    <ClCompile Include="src\BrickRenderer\Material.cpp" />
     <ClCompile Include="src\BrickRenderer\MeshLibrary.cpp" />
     <ClCompile Include="src\BrickRenderer\Platform\OpenGL\OpenGLIndexBuffer.cpp" />
     <ClCompile Include="src\BrickRenderer\Platform\OpenGL\OpenGLRenderer.cpp" />

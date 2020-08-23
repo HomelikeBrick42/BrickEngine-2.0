@@ -18,8 +18,8 @@ namespace BrickEngine {
 
 		virtual void SetViewportSizeImpl(const glm::vec2& size) override;
 
+		virtual void DrawImpl(const Material& material, const Ref<VertexArray> va, const glm::mat4& transform) override;
 		virtual void DrawImpl(const Ref<VertexArray> va, const glm::mat4& transform) override;
-		virtual void DrawImpl(const Ref<Shader> shader, const Ref<VertexArray> va, const glm::mat4& transform) override;
 	private:
 		glm::mat4 m_ProjectionMatrix;
 		DirectionalLight m_DirectionalLight;

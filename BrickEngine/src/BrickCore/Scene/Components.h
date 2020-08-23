@@ -4,6 +4,7 @@
 
 #include "BrickRenderer/VertexArray.h"
 #include "BrickRenderer/Shader.h"
+#include "BrickRenderer/Material.h"
 
 #include "BrickRenderer/Camera.h"
 
@@ -40,12 +41,12 @@ namespace BrickEngine {
 	struct MeshRendererComponent
 	{
 		Ref<VertexArray> Mesh;
-		Ref<Shader> Material;
+		BrickEngine::Material Material;
 
 		MeshRendererComponent() = default;
 		MeshRendererComponent(const MeshRendererComponent&) = default;
-		MeshRendererComponent(const Ref<Shader> shader, const Ref<VertexArray> mesh)
-			: Material(shader), Mesh(mesh) {}
+		MeshRendererComponent(const BrickEngine::Material& material, const Ref<VertexArray> mesh)
+			: Material(material), Mesh(mesh) {}
 	};
 
 	struct CameraComponent

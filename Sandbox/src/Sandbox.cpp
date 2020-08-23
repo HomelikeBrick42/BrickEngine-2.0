@@ -12,9 +12,8 @@ void Sandbox::OnStart()
 {
 	m_Scene = CreateRef<Scene>();
 
-	m_Cube = m_Scene->CreateEntity("Cube");
+	m_Cube = m_Scene->CreateCubeEntity("Cube", glm::vec4(0.2f, 0.3f, 0.8f, 1.0f));
 	m_Cube.GetComponent<TransformComponent>() = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -5.0f));
-	m_Cube.AddComponent<MeshRendererComponent>(ShaderLibrary::Get("Default"), MeshLibrary::Get("SharpEdgeCube"));
 
 	m_Camera = m_Scene->CreateEntity("Main Camera");
 	m_Camera.AddComponent<CameraComponent>(

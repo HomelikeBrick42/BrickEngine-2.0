@@ -8,6 +8,7 @@
 #include "Camera.h"
 
 #include "ShaderLibrary.h"
+#include "Material.h"
 
 namespace BrickEngine {
 
@@ -35,8 +36,8 @@ namespace BrickEngine {
 
 		inline static void SetViewportSize(const glm::vec2& size) { s_Instance->SetViewportSizeImpl(size); }
 
-		inline static void Draw(const Ref<Shader> shader, const Ref<VertexArray> va, const glm::mat4& transform) { s_Instance->DrawImpl(shader, va, transform); }
 		inline static void Draw(const Ref<VertexArray> va, const glm::mat4& transform) { s_Instance->DrawImpl(va, transform); }
+		inline static void Draw(const Material& material, const Ref<VertexArray> va, const glm::mat4& transform) { s_Instance->DrawImpl(material, va, transform); }
 	protected:
 		virtual void BeginImpl(const Camera& camera, const glm::mat4& transform) = 0;
 		virtual void BeginImpl(const Camera& camera, const glm::mat4& transform, const DirectionalLight& light) = 0;
@@ -48,7 +49,7 @@ namespace BrickEngine {
 		virtual void SetViewportSizeImpl(const glm::vec2& size) = 0;
 
 		virtual void DrawImpl(const Ref<VertexArray> va, const glm::mat4& transform) = 0;
-		virtual void DrawImpl(const Ref<Shader> shader, const Ref<VertexArray> va, const glm::mat4& transform) = 0;
+		virtual void DrawImpl(const Material& material, const Ref<VertexArray> va, const glm::mat4& transform) = 0;
 	private:
 		static Renderer* s_Instance;
 	};

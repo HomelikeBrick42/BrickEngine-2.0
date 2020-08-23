@@ -1416,6 +1416,7 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
+    <ClInclude Include="src\BrickRenderer\Material.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\BrickCore\Application.cpp">
@@ -1463,5 +1464,6 @@
     <ClCompile Include="src\brickpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\BrickRenderer\Material.cpp" />
   </ItemGroup>
 </Project>

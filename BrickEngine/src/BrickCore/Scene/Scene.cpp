@@ -11,6 +11,8 @@
 
 #include "Entity.h"
 
+#include "BrickRenderer/MeshLibrary.h"
+
 namespace BrickEngine {
 
 	Scene::Scene()
@@ -26,6 +28,13 @@ namespace BrickEngine {
 		Entity entity = { m_Registry.create(), this };
 		entity.AddComponent<TransformComponent>();
 		entity.AddComponent<TagComponent>(tag.empty() ? "Entity" : tag);
+		return entity;
+	}
+
+	Entity Scene::CreateCubeEntity(const std::string& tag, const glm::vec4& color)
+	{
+		Entity& entity = CreateEntity(tag);
+		entity.AddComponent<MeshRendererComponent>(Material(ShaderLibrary::Get("Default"), color), MeshLibrary::Get("SharpEdgeCube"));
 		return entity;
 	}
 

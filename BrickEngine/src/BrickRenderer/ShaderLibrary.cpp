@@ -40,17 +40,16 @@ namespace BrickEngine {
 				
 				uniform vec3 u_LightColor;
 				uniform vec3 u_LightDirection;
+				uniform vec4 u_Color;
 		
 				void main()
 				{
-					vec4 color = vec4(1.0, 1.0, 1.0, 1.0);
-					
-					vec3 ambiantLight = vec3(0.3, 0.3, 0.3);
+					vec3 ambiantLight = vec3(0.3, 0.3, 0.3) * u_Color.xyz;
 					
 					vec3 u_LightDirection = normalize(u_LightDirection);
-					vec3 diffuseColor = color.xyz * (max(dot(normalize(v_Normal), u_LightDirection) - 0.3, 0.0) * u_LightColor);
+					vec3 diffuseColor = u_Color.xyz * (max(dot(normalize(v_Normal), u_LightDirection) - 0.3, 0.0) * u_LightColor);
 					
-					o_Color = vec4(ambiantLight + diffuseColor, color.w);
+					o_Color = vec4(ambiantLight + diffuseColor, u_Color.w);
 				}
 			)";
 

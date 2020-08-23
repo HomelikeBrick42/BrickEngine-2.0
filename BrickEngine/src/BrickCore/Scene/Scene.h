@@ -15,6 +15,7 @@ namespace BrickEngine {
 		~Scene();
 
 		Entity CreateEntity(const std::string& tag = std::string());
+		Entity CreateCubeEntity(const std::string& tag = std::string(), const glm::vec4& color = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f));
 		Entity FindEntityByTag(const std::string& tag);
 
 		void OnUpdate(float delta);

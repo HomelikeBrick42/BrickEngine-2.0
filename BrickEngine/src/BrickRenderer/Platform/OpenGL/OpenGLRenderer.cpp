@@ -40,16 +40,16 @@ namespace BrickEngine {
 
 	void OpenGLRenderer::DrawImpl(const Ref<VertexArray> va, const glm::mat4& transform)
 	{
-		DrawImpl(ShaderLibrary::Get("Default"), va, transform);
+		DrawImpl({ ShaderLibrary::Get("Default"), glm::vec4(1.0f, 1.0f, 1.0f, 1.0f) }, va, transform);
 	}
 
-	void OpenGLRenderer::DrawImpl(const Ref<Shader> shader, const Ref<VertexArray> va, const glm::mat4& transform)
+	void OpenGLRenderer::DrawImpl(const Material& material, const Ref<VertexArray> va, const glm::mat4& transform)
 	{
-		shader->Bind();
-		shader->SetUniformMat4("u_ProjMatrix", m_ProjectionMatrix);
-		shader->SetUniformMat4("u_ModelMatrix", transform);
-		shader->SetUniformVec3("u_LightDirection", m_DirectionalLight.Direction);
-		shader->SetUniformVec3("u_LightColor", m_DirectionalLight.Color);
+		material.Bind();
+		material.GetShader()->SetUniformMat4("u_ProjMatrix", m_ProjectionMatrix);
+		material.GetShader()->SetUniformMat4("u_ModelMatrix", transform);
+		material.GetShader()->SetUniformVec3("u_LightDirection", m_DirectionalLight.Direction);
+		material.GetShader()->SetUniformVec3("u_LightColor", m_DirectionalLight.Color);
 		va->Bind();
 		glDrawElements(GL_TRIANGLES, va->GetIndexBuffer()->GetCount(), GL_UNSIGNED_INT, nullptr);
 	}
