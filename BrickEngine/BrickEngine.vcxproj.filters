@@ -126,6 +126,9 @@
     <ClInclude Include="src\BrickRenderer\IndexBuffer.h">
       <Filter>src\BrickRenderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\BrickRenderer\Material.h">
+      <Filter>src\BrickRenderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\BrickRenderer\MeshLibrary.h">
       <Filter>src\BrickRenderer</Filter>
     </ClInclude>
@@ -1416,7 +1419,6 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
-    <ClInclude Include="src\BrickRenderer\Material.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\BrickCore\Application.cpp">
@@ -1438,6 +1440,9 @@
       <Filter>src\BrickCore\Scene</Filter>
     </ClCompile>
     <ClCompile Include="src\BrickRenderer\CameraController.cpp">
+      <Filter>src\BrickRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BrickRenderer\Material.cpp">
       <Filter>src\BrickRenderer</Filter>
     </ClCompile>
     <ClCompile Include="src\BrickRenderer\MeshLibrary.cpp">
@@ -1464,6 +1469,5 @@
     <ClCompile Include="src\brickpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\BrickRenderer\Material.cpp" />
   </ItemGroup>
 </Project>

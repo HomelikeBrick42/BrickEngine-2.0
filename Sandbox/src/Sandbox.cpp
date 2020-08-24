@@ -12,8 +12,8 @@ void Sandbox::OnStart()
 {
 	m_Scene = CreateRef<Scene>();
 
-	m_Cube = m_Scene->CreateCubeEntity("Cube", glm::vec4(0.2f, 0.3f, 0.8f, 0.25f));
-	m_Cube.GetComponent<TransformComponent>() =
+	m_Glass = m_Scene->CreateCubeEntity("Glass", glm::vec4(0.2f, 0.3f, 0.8f, 0.25f));
+	m_Glass.GetComponent<TransformComponent>() =
 		glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -5.0f));
 
 	m_Ground = m_Scene->CreateCubeEntity("Ground", glm::vec4(0.2f, 0.8f, 0.3f, 1.0f));

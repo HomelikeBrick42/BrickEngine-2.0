@@ -18,7 +18,7 @@ private:
 	CameraController m_CameraController;
 	Entity m_Camera;
 	Entity m_Ground;
-	Entity m_Cube;
+	Entity m_Glass;
 private:
 	bool ResizeCamera(WindowResizeEvent& e)
 	{

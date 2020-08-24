@@ -1,5 +1,9 @@
 # BrickEngine
-This is a Game Engine that has a Renderer and Entities
+This is a Game Engine that has:
+- A Renderer that supports:
+	- transparency
+	- Basic shadows
+- Entities
 
 # TODO:
 - Add Physics
